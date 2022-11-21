@@ -1,7 +1,11 @@
 <!--
 create by: luxun 2022/11/21 
 first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
+<<<<<<< HEAD
 add question1
+=======
+
+>>>>>>> 7a46e791b64d9faa9895e3843c4cc547e1b7c5b3
 -->
 # github-git Quick Start
 
@@ -208,6 +212,7 @@ Host：别名(自定义) HostName：域名(托管平台的域名) IdentityFile�
 ```
 git config --global credential.helper store
 ```
+<<<<<<< HEAD
 网上方案
 ```
 //取消http代理
@@ -218,6 +223,8 @@ git config --global --unset https.proxy
 git config --global http.sslVerify "false"
 ```
 
+=======
+>>>>>>> 7a46e791b64d9faa9895e3843c4cc547e1b7c5b3
 
 ### 问题二 
 问题： ERROR: Permission to sdudzsj/msp432Templete.git denied to luxun59. fatal: Could not read from remote repository.
