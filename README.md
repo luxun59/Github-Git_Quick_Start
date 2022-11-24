@@ -32,6 +32,8 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
       - [方式一](#方式一)
       - [方式二 windows凭据管理](#方式二-windows凭据管理)
   - [多个ssh(向多个github账号提交代码)](#多个ssh向多个github账号提交代码)
+  - [Git指令详解](#git指令详解)
+    - [git add](#git-add)
   - [常见问题](#常见问题)
     - [问题一](#问题一)
       - [问题：出现代码403 或 100045](#问题出现代码403-或-100045)
@@ -49,10 +51,13 @@ Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理�
 
 GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。
 
-二者关系简言之就是，Git是一个版本管理工具，他可以管理仓库中的内容，库可以在本地也可以在托管平台上；而GitHub是一个托管平台，注册账号便可免费在上面创建开源库。
+Gitee国内的免费的Git仓库。
+
+二者关系简言之就是，Git是一个版本管理工具，他可以管理仓库中的内容，库可以在本地也可以在托管平台上；而GitHub、Gitee是一个托管平台，注册账号便可免费在上面创建开源库。
 
 
 ### Git基本流程
+
 1.创建或克隆仓库
 
 2.add文件
@@ -82,7 +87,6 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads
 ### 4.身份验证
 
 从 Git 连接到 GitHub 存储库时，需要使用 HTTPS 或 SSH 向 GitHub 进行身份验证。
-
 
 #### a.通过 HTTPS 连接(官方文档推荐，安全系数高)
 如果使用 HTTPS 克隆，则可以使用凭据帮助程序在 Git 中缓存 GitHub 凭据。 有关详细信息，请参阅“使用 HTTPS URL 克隆”和“在 Git 中缓存 GitHub 凭据”。
@@ -176,7 +180,6 @@ git commit -m "注释"
 git push  origin main
 ```
 ### 2、本地新建仓库
-1.初始化本地仓库
 ``` 
 git init
 ``` 
@@ -275,6 +278,10 @@ ssh-keygen -t rsa -C "name"
 ```
 Host：别名(自定义) HostName：域名(托管平台的域名) IdentityFile：密钥文件
 
+## Git指令详解
+
+### git add 
+
 
 
 
@@ -332,5 +339,8 @@ git config --global http.sslVerify "false"
 方法二：
 
 代理插件或科学上网。
+
+
+
 
 
