@@ -15,13 +15,13 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
     - [3.git中设置用户名和邮箱](#3git中设置用户名和邮箱)
     - [4.身份验证](#4身份验证)
       - [a.通过 HTTPS 连接(官方文档推荐，安全系数高)](#a通过-https-连接官方文档推荐安全系数高)
-      - [b.通过 SSH 连接(建议个人账号使用,较为方便)](#b通过-ssh-连接建议个人账号使用较为方便)
+      - [b.通过 SSH 连接(建议个人账号使用,较为方便，推荐新手使用)](#b通过-ssh-连接建议个人账号使用较为方便推荐新手使用)
     - [5.生成授权密码](#5生成授权密码)
     - [6.创建并提交代码](#6创建并提交代码)
   - [SSH连接实现验证](#ssh连接实现验证)
   - [初步了解Git](#初步了解git)
     - [常见指令](#常见指令)
-    - [设置用户名和密码](#设置用户名和密码)
+    - [设置用户名和邮箱](#设置用户名和邮箱)
   - [不同方式下提交代码](#不同方式下提交代码)
     - [1、克隆远程仓库](#1克隆远程仓库)
     - [2、本地新建仓库](#2本地新建仓库)
@@ -41,6 +41,8 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
       - [问题： ERROR: Permission to sdudzsj/msp432Templete.git denied to luxun59. fatal: Could not read from remote repository.](#问题-error-permission-to-sdudzsjmsp432templetegit-denied-to-luxun59-fatal-could-not-read-from-remote-repository)
     - [问题三](#问题三)
       - [问题： github访问问题](#问题-github访问问题)
+    - [问题四](#问题四)
+      - [问题： git出现\[END\]，无法操作。](#问题-git出现end无法操作)
 
 
 
@@ -74,7 +76,7 @@ Gitee国内的免费的Git仓库。
 
 ### 1.注册github账号，创建一个库
 
-较为简单暂不展开介绍。网站：https://github.com/
+较为简单暂不展开介绍。Github网站：https://github.com/ ；Gitee网站：https://gitee.com。
 
 ### 2.安装git
 
@@ -82,7 +84,7 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads
 
 ### 3.git中设置用户名和邮箱
 
-下载完成后打开Git Bash，输入指令见 [常见用户指令设置账户信息](###设置用户名和密码)。
+下载完成后打开Git Bash，输入指令见 [常见用户指令设置账户信息](###设置用户名和邮箱)。
 
 ### 4.身份验证
 
@@ -91,13 +93,15 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads
 #### a.通过 HTTPS 连接(官方文档推荐，安全系数高)
 如果使用 HTTPS 克隆，则可以使用凭据帮助程序在 Git 中缓存 GitHub 凭据。 有关详细信息，请参阅“使用 HTTPS URL 克隆”和“在 Git 中缓存 GitHub 凭据”。
 
-#### b.通过 SSH 连接(建议个人账号使用,较为方便)
+#### b.通过 SSH 连接(建议个人账号使用,较为方便，推荐新手使用)
 如果使用 SSH 克隆，则必须在每台计算机上生成用于从 GitHub 进行推送或拉取的 SSH 密钥。 有关详细信息，请参阅[“SSH连接实现Git与Github绑定”](##SSH连接实现Git与Github绑定)。
 
 
 ### 5.生成授权密码
 
 GitHub的密码验证于2021年8月13日不再支持。需要使用 personal access token 替代。personal access token密码的申请流程，[见后面章节](###生成授权密码)。
+
+Gitee此步骤省略。
 
 ### 6.创建并提交代码
 
@@ -109,9 +113,9 @@ GitHub的密码验证于2021年8月13日不再支持。需要使用 personal acc
    ```
    ssh-keygen -t rsa -C "name" -f C:/Users/用户名/.ssh/sdudzsj"
    ```
-   -c后是名称，-f后是路径以及密钥文件名称 请注意使用自己得用户名，sdudzsj是，密钥文件名，如不加默认为id_rsa。
+   -c后是名称(自定义)，-f后是路径以及密钥文件名称 请注意使用自己得用户名，sdudzsj是，密钥文件名，如不加默认为id_rsa。
 
-   输入后一直回车
+   输入后一直回车。
 
 2.在C:/Users/14913/.ssh路径下会生成密钥文件 下图id_rsa.pub就是公钥
 ![sshpub](picture/sshpub.png)
@@ -139,7 +143,7 @@ ssh -T git@github.com
 
 ![table](picture/table.png)
 
-### 设置用户名和密码
+### 设置用户名和邮箱
 
 查看用户名和邮箱地址：
 ```
@@ -340,7 +344,12 @@ git config --global http.sslVerify "false"
 
 代理插件或科学上网。
 
+### 问题四
 
+#### 问题： git出现[END]，无法操作。
 
+解决：使用:q可以退出。
+
+原因：git log 打开内容是采用vim，vim退出指令为q。
 
 
