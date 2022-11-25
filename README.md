@@ -27,11 +27,13 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
     - [2、本地新建仓库](#2本地新建仓库)
     - [3、上传已经存在的仓库](#3上传已经存在的仓库)
   - [登录密码管理](#登录密码管理)
-    - [生成授权密码](#生成授权密码)
-    - [登录账号](#登录账号)
+    - [生成授权密码(github)](#生成授权密码github)
+    - [git登录账号](#git登录账号)
       - [方式一](#方式一)
       - [方式二 windows凭据管理](#方式二-windows凭据管理)
   - [多个ssh(向多个github账号提交代码)](#多个ssh向多个github账号提交代码)
+    - [生成ssh公钥：](#生成ssh公钥)
+    - [验证连接](#验证连接)
   - [Git指令详解](#git指令详解)
     - [git add](#git-add)
   - [常见问题](#常见问题)
@@ -164,7 +166,7 @@ git config --list
 ## 不同方式下提交代码
 ### 1、克隆远程仓库
 1.clone远程仓库
-``` 
+```
 git clone https://github.com/sdudzsj/github-git_learn.git
 ``` 
 2.添加文件
@@ -177,7 +179,7 @@ git commit -m "注释"
 ```
 4.push到远程仓库
 ```
-git push  origin main
+git push  origin master
 ```
 ### 2、本地新建仓库
 ``` 
@@ -193,7 +195,7 @@ git commit -m "注释"
 ```
 4.创建分支
 ```
-git branch -M main 
+git branch -M master 
 ```
 5.添加远程仓库
 ```
@@ -201,7 +203,7 @@ git remote add origin https://github.com/sdudzsj/github-git_learn.git
 ```
 6.push到远程仓库
 ```
-git push -u origin main
+git push -u origin master
 ```
 ### 3、上传已经存在的仓库
 
@@ -215,7 +217,7 @@ git commit -m "注释"
 ```
 3.创建分支
 ```
-git branch -M main 
+git branch -M master 
 ```
 4.添加远程仓库
 ```
@@ -223,12 +225,12 @@ git remote add origin https://github.com/sdudzsj/github-git_learn.git
 ```
 5.push到远程仓库
 ```
-git push -u origin main
+git push -u origin master
 ```
 
 ## 登录密码管理
 
-### 生成授权密码
+### 生成授权密码(github)
 在Settings/Developer settings/Personal access tokens中生成密码
 
 ![generatecode](picture/generatecode.png)
@@ -239,24 +241,25 @@ git push -u origin main
 生成完成后要复制并记住密码，此密码只产生一次!!!!!
 ![savecode](picture/savecode.png)
 
-### 登录账号
+### git登录账号
 
 #### 方式一
 
-使用重置命令
+在进行到push或pull命令时会弹窗登录，在弹窗中输入用户名即github或gitee账号名称，github密码为刚才产生的密码gitee为登录密码。
+
+重新登陆使用重置命令：
 ```
 git config --global credential.helper store
 ```
-在进行到push或pull命令时会弹窗登录，在弹窗中输入用户名即github账号名称，密码为刚才产生的密码。
-
 
 #### 方式二 windows凭据管理
-在windows凭据管理中，添加普通凭据，设置用户名即github账号名称，密码为刚才产生的密码。网络地址为: git:https://github.com
+在windows凭据管理中，添加普通凭据，g设置用户名即github账号名称，密码为刚才产生的密码。网络地址为: git:https://github.com gitee密码即为登录密码，地址为：git:https://gitee.com
 
 
 
 ## 多个ssh(向多个github账号提交代码)
 需要用本地的git账号，使用SSH连接多个github账号。
+### 生成ssh公钥：
 ```
 ssh-keygen -t rsa -C "name"
 ```
@@ -277,6 +280,24 @@ ssh-keygen -t rsa -C "name"
   IdentityFile ~/.ssh/sdudzsj
 ```
 Host：别名(自定义) HostName：域名(托管平台的域名) IdentityFile：密钥文件
+
+### 验证连接
+
+输入
+```
+ssh -T git@HOST
+```
+注意：此处HOST为前面config中设置的别名。
+显示：
+
+github：
+```
+Hi luxun59! You've successfully authenticated, but GitHub does not provide shell access.
+```
+gitee：
+```
+Hi xx! You've successfully authenticated, but GITEE.COM does not provide shell access.
+```
 
 ## Git指令详解
 
