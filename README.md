@@ -6,7 +6,6 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
 # github-git Quick Start
 
 - [github-git Quick Start](#github-git-quick-start)
-- [\<\<\<\<\<\<\< HEAD](#-head)
   - [基本知识](#基本知识)
     - [Git基本流程](#git基本流程)
     - [github上创建库](#github上创建库)
@@ -21,7 +20,6 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
       - [b.通过 SSH 连接(建议个人账号使用,较为方便)](#b通过-ssh-连接建议个人账号使用较为方便)
       - [b.通过 SSH 连接(建议个人账号使用,较为方便，推荐新手使用)](#b通过-ssh-连接建议个人账号使用较为方便推荐新手使用)
     - [5.生成授权密码](#5生成授权密码)
-- [\<\<\<\<\<\<\< HEAD](#-head-1)
     - [6.创建并提交代码](#6创建并提交代码)
   - [SSH连接实现验证](#ssh连接实现验证)
 - [输入后一直回车](#输入后一直回车)
@@ -42,9 +40,6 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
       - [问题： github访问问题](#问题-github访问问题)
     - [问题四](#问题四)
       - [问题： git出现\[END\]，无法操作。](#问题-git出现end无法操作)
->>>>>>> main
-    - [5.生成授权密码](#5生成授权密码)
-    - [6.创建并提交代码](#6创建并提交代码)
   - [SSH连接实现验证](#ssh连接实现验证)
   - [初步了解Git](#初步了解git)
     - [常见指令](#常见指令)
