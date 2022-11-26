@@ -1,7 +1,10 @@
 <!--
-create by: luxun 2022/11/21 
-first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
-
+ * @Author: luxun59 68161305+luxun59@users.noreply.github.com
+ * @Date: 2022-11-25 21:40:38
+ * @LastEditors: luxun59 68161305+luxun59@users.noreply.github.com
+ * @LastEditTime: 2022-11-26 19:54:45
+ * @FilePath: \undefinedc:\Users\14913\Desktop\c2000\http\branch.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 # github-git Quick Start
 
@@ -11,35 +14,13 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
     - [github上创建库](#github上创建库)
   - [首次使用](#首次使用)
     - [1.注册github账号，创建一个库](#1注册github账号创建一个库)
-- [较为简单暂不展开介绍。网站：https://github.com/](#较为简单暂不展开介绍网站httpsgithubcom)
     - [2.安装git](#2安装git)
     - [3.git中设置用户名和邮箱](#3git中设置用户名和邮箱)
-- [下载完成后打开Git Bash，输入指令见 常见用户指令设置账户信息。](#下载完成后打开git-bash输入指令见-常见用户指令设置账户信息)
     - [4.身份验证](#4身份验证)
       - [a.通过 HTTPS 连接(官方文档推荐，安全系数高)](#a通过-https-连接官方文档推荐安全系数高)
-      - [b.通过 SSH 连接(建议个人账号使用,较为方便)](#b通过-ssh-连接建议个人账号使用较为方便)
       - [b.通过 SSH 连接(建议个人账号使用,较为方便，推荐新手使用)](#b通过-ssh-连接建议个人账号使用较为方便推荐新手使用)
     - [5.生成授权密码](#5生成授权密码)
     - [6.创建并提交代码](#6创建并提交代码)
-  - [SSH连接实现验证](#ssh连接实现验证)
-- [输入后一直回车](#输入后一直回车)
-  - [初步了解Git](#初步了解git)
-    - [常见指令](#常见指令)
-    - [设置用户名和密码](#设置用户名和密码)
-    - [设置用户名和邮箱](#设置用户名和邮箱)
-  - [不同方式下提交代码](#不同方式下提交代码)
-    - [1、克隆远程仓库](#1克隆远程仓库)
-- [git push  origin master](#git-push--origin-master)
-- [git branch -M master](#git-branch--m-master)
-- [git push -u origin master](#git-push--u-origin-master)
-- [git branch -M master](#git-branch--m-master-1)
-- [git push -u origin master](#git-push--u-origin-master-1)
-    - [问题二](#问题二)
-      - [问题： ERROR: Permission to sdudzsj/msp432Templete.git denied to luxun59. fatal: Could not read from remote repository.](#问题-error-permission-to-sdudzsjmsp432templetegit-denied-to-luxun59-fatal-could-not-read-from-remote-repository)
-    - [问题三](#问题三)
-      - [问题： github访问问题](#问题-github访问问题)
-    - [问题四](#问题四)
-      - [问题： git出现\[END\]，无法操作。](#问题-git出现end无法操作)
   - [SSH连接实现验证](#ssh连接实现验证)
   - [初步了解Git](#初步了解git)
     - [常见指令](#常见指令)
@@ -49,11 +30,13 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
     - [2、本地新建仓库](#2本地新建仓库)
     - [3、上传已经存在的仓库](#3上传已经存在的仓库)
   - [登录密码管理](#登录密码管理)
-    - [生成授权密码](#生成授权密码)
-    - [登录账号](#登录账号)
+    - [生成授权密码(github)](#生成授权密码github)
+    - [git登录账号](#git登录账号)
       - [方式一](#方式一)
       - [方式二 windows凭据管理](#方式二-windows凭据管理)
   - [多个ssh(向多个github账号提交代码)](#多个ssh向多个github账号提交代码)
+    - [生成ssh公钥：](#生成ssh公钥)
+    - [验证连接](#验证连接)
   - [Git指令详解](#git指令详解)
     - [git add](#git-add)
   - [常见问题](#常见问题)
