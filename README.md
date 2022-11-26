@@ -48,31 +48,17 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
   - [SSH连接实现验证](#ssh连接实现验证)
   - [初步了解Git](#初步了解git)
     - [常见指令](#常见指令)
-<<<<<<< HEAD
-    - [设置用户名和密码](#设置用户名和密码)
-=======
     - [设置用户名和邮箱](#设置用户名和邮箱)
->>>>>>> main
   - [不同方式下提交代码](#不同方式下提交代码)
     - [1、克隆远程仓库](#1克隆远程仓库)
     - [2、本地新建仓库](#2本地新建仓库)
     - [3、上传已经存在的仓库](#3上传已经存在的仓库)
   - [登录密码管理](#登录密码管理)
-<<<<<<< HEAD
-    - [生成授权密码(github)](#生成授权密码github)
-    - [git登录账号](#git登录账号)
-      - [方式一](#方式一)
-      - [方式二 windows凭据管理](#方式二-windows凭据管理)
-  - [多个ssh(向多个github账号提交代码)](#多个ssh向多个github账号提交代码)
-    - [生成ssh公钥：](#生成ssh公钥)
-    - [验证连接](#验证连接)
-=======
     - [生成授权密码](#生成授权密码)
     - [登录账号](#登录账号)
       - [方式一](#方式一)
       - [方式二 windows凭据管理](#方式二-windows凭据管理)
   - [多个ssh(向多个github账号提交代码)](#多个ssh向多个github账号提交代码)
->>>>>>> main
   - [Git指令详解](#git指令详解)
     - [git add](#git-add)
   - [常见问题](#常见问题)
@@ -82,11 +68,8 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
       - [问题： ERROR: Permission to sdudzsj/msp432Templete.git denied to luxun59. fatal: Could not read from remote repository.](#问题-error-permission-to-sdudzsjmsp432templetegit-denied-to-luxun59-fatal-could-not-read-from-remote-repository)
     - [问题三](#问题三)
       - [问题： github访问问题](#问题-github访问问题)
-<<<<<<< HEAD
-=======
     - [问题四](#问题四)
       - [问题： git出现\[END\]，无法操作。](#问题-git出现end无法操作)
->>>>>>> main
 
 
 
@@ -120,11 +103,7 @@ Gitee国内的免费的Git仓库。
 
 ### 1.注册github账号，创建一个库
 
-<<<<<<< HEAD
-较为简单暂不展开介绍。网站：https://github.com/
-=======
 较为简单暂不展开介绍。Github网站：https://github.com/ ；Gitee网站：https://gitee.com。
->>>>>>> main
 
 ### 2.安装git
 
@@ -132,11 +111,7 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads
 
 ### 3.git中设置用户名和邮箱
 
-<<<<<<< HEAD
-下载完成后打开Git Bash，输入指令见 [常见用户指令设置账户信息](###设置用户名和密码)。
-=======
 下载完成后打开Git Bash，输入指令见 [常见用户指令设置账户信息](###设置用户名和邮箱)。
->>>>>>> main
 
 ### 4.身份验证
 
@@ -145,11 +120,7 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads
 #### a.通过 HTTPS 连接(官方文档推荐，安全系数高)
 如果使用 HTTPS 克隆，则可以使用凭据帮助程序在 Git 中缓存 GitHub 凭据。 有关详细信息，请参阅“使用 HTTPS URL 克隆”和“在 Git 中缓存 GitHub 凭据”。
 
-<<<<<<< HEAD
-#### b.通过 SSH 连接(建议个人账号使用,较为方便)
-=======
 #### b.通过 SSH 连接(建议个人账号使用,较为方便，推荐新手使用)
->>>>>>> main
 如果使用 SSH 克隆，则必须在每台计算机上生成用于从 GitHub 进行推送或拉取的 SSH 密钥。 有关详细信息，请参阅[“SSH连接实现Git与Github绑定”](##SSH连接实现Git与Github绑定)。
 
 
@@ -157,11 +128,8 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads
 
 GitHub的密码验证于2021年8月13日不再支持。需要使用 personal access token 替代。personal access token密码的申请流程，[见后面章节](###生成授权密码)。
 
-<<<<<<< HEAD
-=======
 Gitee此步骤省略。
 
->>>>>>> main
 ### 6.创建并提交代码
 
 从GitHub上创建并clone仓库到本地，或者在本地新建仓库并链接到远程仓库。[流程见后面章节](##不同方式下提交代码)。
@@ -172,15 +140,9 @@ Gitee此步骤省略。
    ```
    ssh-keygen -t rsa -C "name" -f C:/Users/用户名/.ssh/sdudzsj"
    ```
-<<<<<<< HEAD
-   -c后是名称，-f后是路径以及密钥文件名称 请注意使用自己得用户名，sdudzsj是，密钥文件名，如不加默认为id_rsa。
-
-   输入后一直回车
-=======
    -c后是名称(自定义)，-f后是路径以及密钥文件名称 请注意使用自己得用户名，sdudzsj是，密钥文件名，如不加默认为id_rsa。
 
    输入后一直回车。
->>>>>>> main
 
 2.在C:/Users/14913/.ssh路径下会生成密钥文件 下图id_rsa.pub就是公钥
 ![sshpub](picture/sshpub.png)
@@ -208,11 +170,7 @@ ssh -T git@github.com
 
 ![table](picture/table.png)
 
-<<<<<<< HEAD
-### 设置用户名和密码
-=======
 ### 设置用户名和邮箱
->>>>>>> main
 
 查看用户名和邮箱地址：
 ```
@@ -237,11 +195,7 @@ git config --list
 ## 不同方式下提交代码
 ### 1、克隆远程仓库
 1.clone远程仓库
-<<<<<<< HEAD
-```
-=======
 ``` 
->>>>>>> main
 git clone https://github.com/sdudzsj/github-git_learn.git
 ``` 
 2.添加文件
@@ -254,11 +208,7 @@ git commit -m "注释"
 ```
 4.push到远程仓库
 ```
-<<<<<<< HEAD
 git push  origin master
-=======
-git push  origin main
->>>>>>> main
 ```
 ### 2、本地新建仓库
 ``` 
@@ -274,11 +224,7 @@ git commit -m "注释"
 ```
 4.创建分支
 ```
-<<<<<<< HEAD
 git branch -M master 
-=======
-git branch -M main 
->>>>>>> main
 ```
 5.添加远程仓库
 ```
@@ -286,11 +232,7 @@ git remote add origin https://github.com/sdudzsj/github-git_learn.git
 ```
 6.push到远程仓库
 ```
-<<<<<<< HEAD
-git push -u origin master
-=======
 git push -u origin main
->>>>>>> main
 ```
 ### 3、上传已经存在的仓库
 
@@ -304,11 +246,7 @@ git commit -m "注释"
 ```
 3.创建分支
 ```
-<<<<<<< HEAD
-git branch -M master 
-=======
 git branch -M main 
->>>>>>> main
 ```
 4.添加远程仓库
 ```
@@ -316,20 +254,12 @@ git remote add origin https://github.com/sdudzsj/github-git_learn.git
 ```
 5.push到远程仓库
 ```
-<<<<<<< HEAD
-git push -u origin master
-=======
 git push -u origin main
->>>>>>> main
 ```
 
 ## 登录密码管理
 
-<<<<<<< HEAD
 ### 生成授权密码(github)
-=======
-### 生成授权密码
->>>>>>> main
 在Settings/Developer settings/Personal access tokens中生成密码
 
 ![generatecode](picture/generatecode.png)
@@ -340,7 +270,6 @@ git push -u origin main
 生成完成后要复制并记住密码，此密码只产生一次!!!!!
 ![savecode](picture/savecode.png)
 
-<<<<<<< HEAD
 ### git登录账号
 
 #### 方式一
@@ -354,30 +283,12 @@ git config --global credential.helper store
 
 #### 方式二 windows凭据管理
 在windows凭据管理中，添加普通凭据，g设置用户名即github账号名称，密码为刚才产生的密码。网络地址为: git:https://github.com gitee密码即为登录密码，地址为：git:https://gitee.com
-=======
-### 登录账号
-
-#### 方式一
-
-使用重置命令
-```
-git config --global credential.helper store
-```
-在进行到push或pull命令时会弹窗登录，在弹窗中输入用户名即github账号名称，密码为刚才产生的密码。
-
-
-#### 方式二 windows凭据管理
-在windows凭据管理中，添加普通凭据，设置用户名即github账号名称，密码为刚才产生的密码。网络地址为: git:https://github.com
->>>>>>> main
 
 
 
 ## 多个ssh(向多个github账号提交代码)
 需要用本地的git账号，使用SSH连接多个github账号。
-<<<<<<< HEAD
 ### 生成ssh公钥：
-=======
->>>>>>> main
 ```
 ssh-keygen -t rsa -C "name"
 ```
@@ -399,7 +310,6 @@ ssh-keygen -t rsa -C "name"
 ```
 Host：别名(自定义) HostName：域名(托管平台的域名) IdentityFile：密钥文件
 
-<<<<<<< HEAD
 ### 验证连接
 
 输入
@@ -418,8 +328,6 @@ gitee：
 Hi xx! You've successfully authenticated, but GITEE.COM does not provide shell access.
 ```
 
-=======
->>>>>>> main
 ## Git指令详解
 
 ### git add 
@@ -482,10 +390,6 @@ git config --global http.sslVerify "false"
 
 代理插件或科学上网。
 
-<<<<<<< HEAD
-
-
-=======
 ### 问题四
 
 #### 问题： git出现[END]，无法操作。
@@ -493,6 +397,5 @@ git config --global http.sslVerify "false"
 解决：使用:q可以退出。
 
 原因：git log 打开内容是采用vim，vim退出指令为q。
->>>>>>> main
 
 
