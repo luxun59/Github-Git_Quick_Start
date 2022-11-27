@@ -1,8 +1,8 @@
 <!--
  * @Author: luxun59 68161305+luxun59@users.noreply.github.com
  * @Date: 2022-11-25 21:40:38
- * @LastEditors: luxun59 68161305+luxun59@users.noreply.github.com
- * @LastEditTime: 2022-11-26 19:54:45
+ * @LastEditors: luxun59 luxun59@126.com
+ * @LastEditTime: 2022-11-27 17:07:40
  * @FilePath: \undefinedc:\Users\14913\Desktop\c2000\http\branch.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -89,7 +89,7 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads
 
 ### 3.git中设置用户名和邮箱
 
-下载完成后打开Git Bash，输入指令见 [常见用户指令设置账户信息](###设置用户名和邮箱)。
+下载完成后打开Git Bash，输入指令见 [常见用户指令设置账户信息](##初步了解Git)。
 
 ### 4.身份验证
 
