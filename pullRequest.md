@@ -2,8 +2,8 @@
  * @Author: luxun59 luxun59@126.com
  * @Date: 2022-11-27 22:03:12
  * @LastEditors: luxun59 luxun59@126.com
- * @LastEditTime: 2022-11-27 22:29:28
- * @FilePath: \driverc:\Users\14913\Desktop\c2000\http\pullRequest.md
+ * @LastEditTime: 2022-11-28 16:48:42
+ * @FilePath: \undefinedc:\Users\14913\Desktop\c2000\http\pullRequest.md
  * @Description: 
  * 
  * Copyright (c) 2022 by luxun59 luxun59@126.com, All Rights Reserved. 
@@ -82,5 +82,5 @@ git push origin feature--xx
 
 ### 7.审查Pull Request
 
-维护者会审查pull request并将修改合并到官方仓库。
+官方仓库的维护者会审查pull request并将修改合并到官方仓库。
 
