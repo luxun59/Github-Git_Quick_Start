@@ -1,24 +1,30 @@
 <!--
-create by: luxun 2022/11/21 
-first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
-
+ * @Author: luxun59 luxun59@126.com
+ * @Date: 2022-11-23 19:59:51
+ * @LastEditors: luxun59 luxun59@126.com
+ * @LastEditTime: 2022-11-30 11:46:47
+ * @FilePath: \undefinedc:\Users\14913\Desktop\c2000\http\README.md
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by luxun59 luxun59@126.com, All Rights Reserved. 
 -->
-# github-git Quick Start
 
-- [github-git Quick Start](#github-git-quick-start)
+# Git Quick Start
+
+- [Git Quick Start](#git-quick-start)
   - [基本知识](#基本知识)
     - [Git基本流程](#git基本流程)
-    - [github上创建库](#github上创建库)
+    - [github(或gitee)上创建库](#github或gitee上创建库)
   - [首次使用](#首次使用)
-    - [1.注册github账号，创建一个库](#1注册github账号创建一个库)
+    - [1.注册github（或gitee）账号，创建一个库](#1注册github或gitee账号创建一个库)
     - [2.安装git](#2安装git)
     - [3.git中设置用户名和邮箱](#3git中设置用户名和邮箱)
     - [4.身份验证](#4身份验证)
       - [a.通过 HTTPS 连接(官方文档推荐，安全系数高)](#a通过-https-连接官方文档推荐安全系数高)
-      - [b.通过 SSH 连接(建议个人账号使用,较为方便，推荐新手使用)](#b通过-ssh-连接建议个人账号使用较为方便推荐新手使用)
+      - [b.通过 SSH 连接(建议个人账号使用,较为方便，推荐新手使用 )](#b通过-ssh-连接建议个人账号使用较为方便推荐新手使用-)
     - [5.生成授权密码](#5生成授权密码)
     - [6.创建并提交代码](#6创建并提交代码)
-  - [SSH连接实现验证](#ssh连接实现验证)
+  - [SSH连接实现及验证](#ssh连接实现及验证)
   - [初步了解Git](#初步了解git)
     - [常见指令](#常见指令)
     - [设置用户名和邮箱](#设置用户名和邮箱)
@@ -27,13 +33,13 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
     - [2、本地新建仓库](#2本地新建仓库)
     - [3、上传已经存在的仓库](#3上传已经存在的仓库)
   - [登录密码管理](#登录密码管理)
-    - [生成授权密码](#生成授权密码)
-    - [登录账号](#登录账号)
+    - [生成授权密码(github)](#生成授权密码github)
+    - [git登录账号](#git登录账号)
       - [方式一](#方式一)
       - [方式二 windows凭据管理](#方式二-windows凭据管理)
   - [多个ssh(向多个github账号提交代码)](#多个ssh向多个github账号提交代码)
-  - [Git指令详解](#git指令详解)
-    - [git add](#git-add)
+    - [生成ssh公钥：](#生成ssh公钥)
+    - [验证连接](#验证连接)
   - [常见问题](#常见问题)
     - [问题一](#问题一)
       - [问题：出现代码403 或 100045](#问题出现代码403-或-100045)
@@ -43,6 +49,10 @@ first commit : luxun 2022/11/21 email:luxun59.lx@gmail.com
       - [问题： github访问问题](#问题-github访问问题)
     - [问题四](#问题四)
       - [问题： git出现\[END\]，无法操作。](#问题-git出现end无法操作)
+    - [问题五](#问题五)
+      - [问题： refusing to merge unrelated histories](#问题-refusing-to-merge-unrelated-histories)
+    - [问题六](#问题六)
+      - [问题：write error: Broken pipe](#问题write-error-broken-pipe)
 
 
 
@@ -68,13 +78,14 @@ Gitee国内的免费的Git仓库。
 
 4.push到远程仓库
   
-### github上创建库
-比较简单只需要new一个repository就可。
+### github(或gitee)上创建库
+
+比较简单只需要new一个repository（新建仓库）就可。
 
 ## 首次使用
 首次使用请按一下流程：
 
-### 1.注册github账号，创建一个库
+### 1.注册github（或gitee）账号，创建一个库
 
 较为简单暂不展开介绍。Github网站：https://github.com/ ；Gitee网站：https://gitee.com。
 
@@ -84,7 +95,7 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads
 
 ### 3.git中设置用户名和邮箱
 
-下载完成后打开Git Bash，输入指令见 [常见用户指令设置账户信息](###设置用户名和邮箱)。
+下载完成后打开Git Bash，输入指令见 [常见用户指令设置账户信息](#初步了解git)。
 
 ### 4.身份验证
 
@@ -93,21 +104,21 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads
 #### a.通过 HTTPS 连接(官方文档推荐，安全系数高)
 如果使用 HTTPS 克隆，则可以使用凭据帮助程序在 Git 中缓存 GitHub 凭据。 有关详细信息，请参阅“使用 HTTPS URL 克隆”和“在 Git 中缓存 GitHub 凭据”。
 
-#### b.通过 SSH 连接(建议个人账号使用,较为方便，推荐新手使用)
-如果使用 SSH 克隆，则必须在每台计算机上生成用于从 GitHub 进行推送或拉取的 SSH 密钥。 有关详细信息，请参阅[“SSH连接实现Git与Github绑定”](##SSH连接实现Git与Github绑定)。
+#### b.通过 SSH 连接(建议个人账号使用,较为方便，<font color=RED>推荐新手使用</font> )
+如果使用 SSH 克隆，则必须在每台计算机上生成用于从 GitHub 进行推送或拉取的 SSH 密钥。 有关详细信息，请参阅[“SSH连接实现Git与Github绑定”](#ssh连接实现及验证)。
 
 
 ### 5.生成授权密码
 
-GitHub的密码验证于2021年8月13日不再支持。需要使用 personal access token 替代。personal access token密码的申请流程，[见后面章节](###生成授权密码)。
+GitHub的密码验证于2021年8月13日不再支持。需要使用 personal access token 替代。personal access token密码的申请流程，[见后面章节](#生成授权密码github)。
 
 Gitee此步骤省略。
 
 ### 6.创建并提交代码
 
-从GitHub上创建并clone仓库到本地，或者在本地新建仓库并链接到远程仓库。[流程见后面章节](##不同方式下提交代码)。
+从GitHub上创建并clone仓库到本地，或者在本地新建仓库并链接到远程仓库。[流程见后面章节](#不同方式下提交代码)。
 
-## SSH连接实现验证
+## SSH连接实现及验证
 
 1.在git bash中输入
    ```
@@ -133,7 +144,7 @@ ssh -T git@github.com
 
 5.通过 Git 将代码提交到 GitHub
 
-流程见 ["不同方式下提交代码"](##不同方式下提交代码).
+流程见 ["不同方式下提交代码"](#不同方式下提交代码).
 
 注意初次提交代码会让输入账号密码。注意自从2021年后，github官方更改了密码授权规则，此处输入的密码需要在
 
@@ -181,7 +192,7 @@ git commit -m "注释"
 ```
 4.push到远程仓库
 ```
-git push  origin main
+git push  origin master
 ```
 ### 2、本地新建仓库
 ``` 
@@ -197,7 +208,7 @@ git commit -m "注释"
 ```
 4.创建分支
 ```
-git branch -M main 
+git branch -M master 
 ```
 5.添加远程仓库
 ```
@@ -232,7 +243,7 @@ git push -u origin main
 
 ## 登录密码管理
 
-### 生成授权密码
+### 生成授权密码(github)
 在Settings/Developer settings/Personal access tokens中生成密码
 
 ![generatecode](picture/generatecode.png)
@@ -243,24 +254,25 @@ git push -u origin main
 生成完成后要复制并记住密码，此密码只产生一次!!!!!
 ![savecode](picture/savecode.png)
 
-### 登录账号
+### git登录账号
 
 #### 方式一
 
-使用重置命令
+在进行到push或pull命令时会弹窗登录，在弹窗中输入用户名即github或gitee账号名称，github密码为刚才产生的密码gitee为登录密码。
+
+重新登陆使用重置命令：
 ```
 git config --global credential.helper store
 ```
-在进行到push或pull命令时会弹窗登录，在弹窗中输入用户名即github账号名称，密码为刚才产生的密码。
-
 
 #### 方式二 windows凭据管理
-在windows凭据管理中，添加普通凭据，设置用户名即github账号名称，密码为刚才产生的密码。网络地址为: git:https://github.com
+在windows凭据管理中，添加普通凭据，g设置用户名即github账号名称，密码为刚才产生的密码。网络地址为: git:https://github.com gitee密码即为登录密码，地址为：git:https://gitee.com
 
 
 
 ## 多个ssh(向多个github账号提交代码)
 需要用本地的git账号，使用SSH连接多个github账号。
+### 生成ssh公钥：
 ```
 ssh-keygen -t rsa -C "name"
 ```
@@ -282,10 +294,23 @@ ssh-keygen -t rsa -C "name"
 ```
 Host：别名(自定义) HostName：域名(托管平台的域名) IdentityFile：密钥文件
 
-## Git指令详解
+### 验证连接
 
-### git add 
+输入
+```
+ssh -T git@HOST
+```
+注意：此处HOST为前面config中设置的别名。
+显示：
 
+github：
+```
+Hi xx! You've successfully authenticated, but GitHub does not provide shell access.
+```
+gitee：
+```
+Hi xx! You've successfully authenticated, but GITEE.COM does not provide shell access.
+```
 
 
 
@@ -351,5 +376,36 @@ git config --global http.sslVerify "false"
 解决：使用:q可以退出。
 
 原因：git log 打开内容是采用vim，vim退出指令为q。
+
+### 问题五
+
+#### 问题： refusing to merge unrelated histories
+
+解决： 后面加``--allow-unrelated-histories``。
+
+
+### 问题六
+
+#### 问题：write error: Broken pipe
+
+描述：在使用git push推送大文件（超过了100MB）到GitHub远程仓库时提示异常，异常信息如下：
+```
+ fatal: sha1 file '<stdout>' write error: Broken pipe
+ fatal: the remote end hung up unexpectedly
+```
+
+解决： 调整服务对应单词上传大小配置,默认单位B(字节)
+```
+# 方法一：全局配置
+git config --global http.postBuffer 524288000
+
+# 方法二：当前仓库配置
+git config http.postBuffer 524288000
+```
+
+原因： GitHub对提交的文件大小做了限制，GitHub会阻止超过100 MB的推送（单文件）。
+
+
+
 
 
