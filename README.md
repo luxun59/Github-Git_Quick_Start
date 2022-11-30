@@ -2,7 +2,7 @@
  * @Author: luxun59 luxun59@126.com
  * @Date: 2022-11-23 19:59:51
  * @LastEditors: luxun59 luxun59@126.com
- * @LastEditTime: 2022-11-30 11:46:47
+ * @LastEditTime: 2022-11-30 16:19:07
  * @FilePath: \undefinedc:\Users\14913\Desktop\c2000\http\README.md
  * @Description: 
  * 
@@ -70,11 +70,11 @@ Gitee国内的免费的Git仓库。
 
 ### Git基本流程
 
-1.创建或克隆仓库
+1.创建或clone克隆仓库
 
-2.add文件
+2.add文件到暂存区
 
-3.commit到本地仓库
+3.commit提交修改
 
 4.push到远程仓库
   
@@ -153,6 +153,8 @@ ssh -T git@github.com
 ### 常见指令
 
 ![table](picture/table.png)
+
+更详细指令介绍见[“常见指令详解.md”。](%E5%B8%B8%E8%A7%81%E6%8C%87%E4%BB%A4.md)
 
 ### 设置用户名和邮箱
 
