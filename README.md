@@ -2,7 +2,7 @@
  * @Author: luxun59 luxun59@126.com
  * @Date: 2022-11-23 19:59:51
  * @LastEditors: luxun59 luxun59@126.com
- * @LastEditTime: 2022-11-30 16:19:07
+ * @LastEditTime: 2022-11-30 16:32:33
  * @FilePath: \undefinedc:\Users\14913\Desktop\c2000\http\README.md
  * @Description: 
  * 
@@ -15,6 +15,7 @@
   - [基本知识](#基本知识)
     - [Git基本流程](#git基本流程)
     - [github(或gitee)上创建库](#github或gitee上创建库)
+    - [为本开源仓库贡献开发](#为本开源仓库贡献开发)
   - [首次使用](#首次使用)
     - [1.注册github（或gitee）账号，创建一个库](#1注册github或gitee账号创建一个库)
     - [2.安装git](#2安装git)
@@ -81,6 +82,10 @@ Gitee国内的免费的Git仓库。
 ### github(或gitee)上创建库
 
 比较简单只需要new一个repository（新建仓库）就可。
+
+### 为本开源仓库贡献开发
+
+使用pull request 工作流方式，详见[pullRequest.md](pullRequest.md)。
 
 ## 首次使用
 首次使用请按一下流程：
